@@ -65,11 +65,15 @@ int main() {
     }
 
     // Simulate failure of process with ID 3
-    int failed_process_id = 3;
+    int failed_process_id;
+    printf("Enter the process_id of failed process:");
+    scanf ("%d",&failed_process_id);
     process_failure(failed_process_id);
 
-    // Assume process 2 initiates the election and sends a message to the next higher-priority process
-    int initiating_process_id = 2; // Change as required
+    // Assume process initiates the election and sends a message to the next higher-priority process
+    int initiating_process_id; // Change as required
+    printf("Enter the process which initiates election: ");
+    scanf("%d",&initiating_process_id);
     printf("Process %d initiates election.\n", initiating_process_id);
 
     for (int i = initiating_process_id + 1; i < NUM_PROCESSES; i++) {
