@@ -10,7 +10,7 @@ struct Process {
 };
 
 struct Process processes[NUM_PROCESSES];
-int coordinator_id = -1; // Initially no coordinator
+int coordinator_id = -1;                // Initially no coordinator
 
 void initiate_election(int process_id) {
     printf("Process %d initiates election.\n", process_id);
